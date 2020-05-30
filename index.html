@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cades Portfolio</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div id="app">
+			<v-app>
+				<v-content>
+                    <div v-if="page == 'home'" id="swup" class="animation-class">
+                        <video autoplay muted loop id="homehero">
+                            <source src="images/homehero.mp4" type="video/mp4">
+                        </video>
+                        <div id="homeContainer">
+                            <h1 id="meetCade">My name is <span class="blueText">Cade Gardner.</span><br>I am a full-stack developer.</h1>
+                            <div id="portButtonContainer">
+                                <button id="viewPortBtn" @click="page='myWork'">Learn More<img class="whiteArrow" src="images/arrow.png"></button>
+                            </div>
+                            <div id="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                            </div>
+                            <div id="aboutContainer">
+                                <p>I am a dedicated and efficient full stack software developer with 2 years experience
+                                    in server-side and client-side web app development, back-end development, and other software
+                                    programming languages. I am an ambitious team player eager to use my personal and
+                                    technical skills to innovate and optimize in the environment I am placed.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="darkBack" v-if="page == 'myWork'">
+                        <div id="header">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'">Home</li>
+                                    <li>My Work</li>
+                                    <li>About Me</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="myWrapper">
+                            <div class="iconWrap">
+                                <img class="myIcon" src="images/skills.png">
+                                <span>Skills</span>
+                            </div>
+                            <div class="iconWrap">
+                                <img class="myIcon" src="images/skills.png">
+                                <span>Skills</span>
+                            </div>
+                            <div class="iconWrap">
+                                <img class="myIcon" src="images/skills.png">
+                                <span>Skills</span>
+                            </div>
+                        </div>            
+                    </div>
+
+                </v-content>
+            </v-app>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
+
