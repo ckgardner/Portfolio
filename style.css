@@ -2,6 +2,10 @@
     font-family: "main";
     src: url("fonts/Raleway/Raleway-Regular.ttf");
 }
+@font-face{
+    font-family: "boldy";
+    src: url("fonts/Raleway//Raleway-Bold.ttf")
+}
 *{
     font-family: "main";
 }
@@ -95,7 +99,7 @@ html, body{
 }
 #header{
     background-color: transparent;
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 75px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.293)
@@ -128,6 +132,13 @@ li:visited{
 li:hover{
     color: rgb(43, 190, 235);
 }
+
+#aboutTitle{
+    text-align: center;
+    font-family: "boldy";
+    color: white;
+    text-decoration: underline rgb(43, 190, 235);
+}
 #profilePic:hover{
     border: 2px solid rgb(43, 190, 235, 0.5);
 }
@@ -139,21 +150,33 @@ li:hover{
 }
 .myWrapper{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     justify-items: center;
     text-align: center;
 }
-.iconWrap span{
+.iconTitle{
+    font-size: 24px;
+    color: rgba(43, 190, 235, .9);
+    font-family: "boldy";
+}
+.iconText{
     color: white;
-    font-size: 20px;
+}
+.textWrapper{
+    width: 220px;
 }
 .myIcon{
     height: 110px;
     width: 120px;
-    margin-top: 130px;
+    margin-top: 50px;
     display: grid;
-    margin-bottom: 5px;
-    background-color: rgb(43, 190, 235);
-    border-radius: 20%;
+    margin-bottom: 10px;
+    margin-left: 45px;
     overflow: visible;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+            transition:         transform .8s ease-in-out;
+}
+.myIcon:hover{
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
 }

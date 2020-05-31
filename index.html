@@ -15,8 +15,8 @@
                         </video>
                         <div id="homeContainer">
                             <h1 id="meetCade">My name is <span class="blueText">Cade Gardner.</span><br>I am a full-stack developer.</h1>
-                            <div id="portButtonContainer">
-                                <button id="viewPortBtn" @click="page='myWork'">Learn More<img class="whiteArrow" src="images/arrow.png"></button>
+                            <div id="portButtonContainer" @click="page='aboutMe'">
+                                <button id="viewPortBtn">Learn More<img class="whiteArrow" src="images/arrow.png"></button>
                             </div>
                             <div id="socialWrapper">
                                 <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
@@ -26,36 +26,55 @@
                             <div id="aboutContainer">
                                 <p>I am a dedicated and efficient full stack software developer with 2 years experience
                                     in server-side and client-side web app development, back-end development, and other software
-                                    programming languages. I am an ambitious team player eager to use my personal and
-                                    technical skills to innovate and optimize in the environment I am placed.</p>
+                                    programming languages. I am an ambitious team player, eager to use my personal and
+                                    technical skills to innovate and optimize the environment wheren I am placed.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="darkBack" v-if="page == 'myWork'">
+                    <div class="darkBack" v-if="page == 'aboutMe'">
                         <div id="header">
                             <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                             <nav>
                                 <ul>
                                     <li @click="page='home'">Home</li>
+                                    <li @click="page='aboutMe'">About Me</li>
                                     <li>My Work</li>
-                                    <li>About Me</li>
                                     <li>Contact</li>
                                 </ul>
                             </nav>
                         </div>
+                        <div id="aboutTitle">
+                            <h1>ABOUT ME</h1>
+                        </div>
                         <div class="myWrapper">
                             <div class="iconWrap">
                                 <img class="myIcon" src="images/skills.png">
-                                <span>Skills</span>
+                                <span class="iconTitle">DETAILED</span><br>
+                                <div class="textWrapper">
+                                    <span class="iconText">I stay focused in my work and I am attentive to details.</span>
+                                </div>
                             </div>
                             <div class="iconWrap">
-                                <img class="myIcon" src="images/skills.png">
-                                <span>Skills</span>
+                                <img class="myIcon" src="images/time.png">
+                                <span class="iconTitle">TIME</span><br>
+                                <div class="textWrapper">
+                                    <span class="iconText">I am a quick learner, with great time and task management.</span>
+                                </div> 
                             </div>
                             <div class="iconWrap">
-                                <img class="myIcon" src="images/skills.png">
-                                <span>Skills</span>
+                                <img class="myIcon" src="images/team.png">
+                                <span class="iconTitle">TEAM PLAYER</span><br>
+                                <div class="textWrapper">
+                                    <span class="iconText">I absolutely love to work with others. I believe communication is key.</span>
+                                </div>
+                            </div>
+                            <div class="iconWrap">
+                                <img class="myIcon" src="images/fullStack.png">
+                                <span class="iconTitle">FULL STACK</span><br>
+                                <div class="textWrapper">
+                                    <span class="iconText">Most experienced in web development. However, I have experience in many languages, frameworks, and libraries. </span>
+                                </div>
                             </div>
                         </div>            
                     </div>
