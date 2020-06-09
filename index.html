@@ -3,7 +3,9 @@
     <head>
         <title>Cades Portfolio</title>
         <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
     </head>
     <body>
         <div id="app">
@@ -66,24 +68,39 @@
                                 <img class="myIcon" src="images/team.png">
                                 <span class="iconTitle">TEAM PLAYER</span><br>
                                 <div class="textWrapper">
-                                    <span class="iconText">I absolutely love to work with others. I believe communication is key.</span>
+                                    <span class="iconText">I love to work with others. I believe communication is key.</span>
                                 </div>
                             </div>
                             <div class="iconWrap">
                                 <img class="myIcon" src="images/fullStack.png">
                                 <span class="iconTitle">FULL STACK</span><br>
                                 <div class="textWrapper">
-                                    <span class="iconText">Most experienced in web development. However, I have experience in many languages, frameworks, and libraries. </span>
+                                    <span class="iconText">I have experience in many languages, frameworks, and libraries. </span>
                                 </div>
                             </div>
-                        </div>            
+                        </div>
+                        
+                        <div class="langTitle">
+                            <h2>Front-End Languages & Frameworks</h2>
+                            <h2>Back-End Languages & Frameworks</h2>
+                        </div>
+                        <div class="chartWrapper">
+                            <div class="chartContainer" style="position: relative; height:40vh; width:40vw">
+                                <canvas class="chart" id="frontEndChart"></canvas>
+                            </div>
+                            <div class="chartContainer" style="position: relative; height:40vh; width:40vw">
+                                <canvas class="chart" id="backEndChart"></canvas>
+                            </div>
+                        </div>
                     </div>
 
                 </v-content>
             </v-app>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="app.js"></script>
+        <script src="charts.js"></script>
     </body>
 </html>
 
