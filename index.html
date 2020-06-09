@@ -6,11 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
+        <script src="charts.js"></script>
     </head>
     <body>
         <div id="app">
 			<v-app>
 				<v-content>
+                    <!-- HOME PAGE CONTENT -->
                     <div v-if="page == 'home'" id="swup" class="animation-class">
                         <video autoplay muted loop id="homehero">
                             <source src="images/homehero.mp4" type="video/mp4">
@@ -20,28 +22,30 @@
                             <div id="portButtonContainer" @click="page='aboutMe'">
                                 <button id="viewPortBtn">Learn More<img class="whiteArrow" src="images/arrow.png"></button>
                             </div>
-                            <div id="socialWrapper">
+                            <div class="socialWrapper">
                                 <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
                                 <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
                                 <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
                             </div>
                             <div id="aboutContainer">
                                 <p>I am a dedicated and efficient full stack software developer with 2 years experience
                                     in server-side and client-side web app development, back-end development, and other software
                                     programming languages. I am an ambitious team player, eager to use my personal and
-                                    technical skills to innovate and optimize the environment wheren I am placed.</p>
+                                    technical skills to innovate and optimize the environment where I am placed.</p>
                             </div>
                         </div>
                     </div>
                     
+                    <!-- ABOUT ME CONTENT -->
                     <div class="darkBack" v-if="page == 'aboutMe'">
                         <div id="header">
                             <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                             <nav>
                                 <ul>
-                                    <li @click="page='home'">Home</li>
-                                    <li @click="page='aboutMe'">About Me</li>
-                                    <li>My Work</li>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
                                     <li>Contact</li>
                                 </ul>
                             </nav>
@@ -92,6 +96,33 @@
                                 <canvas class="chart" id="backEndChart"></canvas>
                             </div>
                         </div>
+                        
+                        <footer>
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <div class="lightBack" v-if="page == 'myWork'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div id="workTitle">
+                            <h1>MY WORK</h1>
+                        </div>
                     </div>
 
                 </v-content>
@@ -100,7 +131,6 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="app.js"></script>
-        <script src="charts.js"></script>
     </body>
 </html>
 
