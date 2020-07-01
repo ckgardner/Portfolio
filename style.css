@@ -63,6 +63,8 @@ html, body{
     height: 45px;
     width: 45px;
     margin: 15px;
+    border-radius: 50%;
+    transition: .5s;
 }
 .socialIcon:hover{
     border: 5px solid rgb(43, 190, 235, 0.5);
@@ -231,4 +233,44 @@ footer p{
 }
 #workTitle{
     color: rgb(69,71,74);
+}
+.workNav{
+    width: 800px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.workBtn{
+    font-size: 16px;
+    height: 30px;
+    width: 150px;
+    padding: 5px 15px 5px 15px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    outline: none;
+}
+.workFocus{
+    background-color: rgba(43, 190, 235, .8);
+}
+.workWrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.workImg{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 300px;
+}
+#uno{
+    background-image: url("images/Uno/uno.png");
 }
