@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     </head>
     <body>
         <div id="app">
@@ -18,7 +19,7 @@
                         </video>
                         <div id="homeContainer">
                             <h1 id="meetCade">My name is <span class="blueText">Cade Gardner.</span><br>I am a full-stack developer.</h1>
-                            <div id="portButtonContainer" @click="page='aboutMe'">
+                            <div id="portButtonContainer" @click="page='aboutMe';selectMe();">
                                 <button id="viewPortBtn">Learn More<img class="whiteArrow" src="images/arrow.png"></button>
                             </div>
                             <div class="socialWrapper">
@@ -125,15 +126,81 @@
                             <button class="workBtn" :class="{workFocus: front_selected}" @click="workSelection='frontEnd'; selectFront()">FRONT END</button>
                             <button class="workBtn" :class="{workFocus: back_selected}" @click="workSelection='backEnd'; selectBack()">BACK END</button>
                         </div>
-                        <div class="workWrapper" v-if="workSelection == 'all'">
-                            <div class="workImg" id="uno"></div>
+                        <div class="workWrapper">
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'backEnd'" @mouseover="unoHover=true" @mouseout="unoHover=false" @click="page='detailedUno'">
+                                <img class="workImg" src="images/Uno/uno.png">
+                                <div class="text" v-if="unoHover">UNO - Websockets</div>
+                            </div>
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="wildflowerHover=true" @mouseout="wildflowerHover=false">
+                                <img class="workImg" src="images/Wildflower/main.png">
+                                <div class="text" v-if="wildflowerHover">Zion Wildflower - Mobile PWA</div>
+                            </div>
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="dashboardHover=true" @mouseout="dashboardHover=false">
+                                <img class="workImg" src="images/Dashboard/main.png">
+                                <div class="text" v-if="dashboardHover">Zion Dashboard - Desktop</div>
+                            </div>
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="countHover=true" @mouseout="countHover=false">
+                                <img class="workImg" src="images/Count/main.png">
+                                <div class="text" v-if="countHover">Zion VEM - Mobile PWA</div>
+                            </div>
                         </div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                     <div class="lightBack" v-if="page == 'detailedUno'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li>Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="centerWrapper">
+                            <h1 class="detailedHeader">Uno</h1>
+                            <h2 class="detailedSubHeader">A Websockets Project</h2>
+                            <video autoplay muted loop class="detailedVideo">
+                                <source src="images/Uno/recording.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="detailedText">
+                        Uno, was a fun class project during my Junior year. The game was my own idea to build, with the requirement to make a websocket application.
+                        The focus wasn't as much on the UI, but the constant use of websockets. Wether a player was to send a message to an opponent, draw a card, or play a card,
+                        websockets would process the action and display it to the other user in a variety of ways. 
+                        </p>
+                        <div class="detailedGridWrap">
+                            <div class="detailedPicWrapper">
+                                <img class="detailedGridImg" src="images/Uno/1.png">
+                            </div>
+                            <div class="detailedPicWrapper">
+                                <img class="detailedGridImg" src="images/Uno/2.png">
+                            </div>
+                        </div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
                     </div>
 
                 </v-content>
             </v-app>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
         <script src="charts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="app.js"></script>

@@ -1,7 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
-        page: 'aboutMe', // home, aboutMe, myWork
+        page: 'myWork', // home, aboutMe, myWork
         workSelection: 'all', //all, frontEnd, backEnd
 
         home_selected: true,
@@ -11,6 +11,16 @@ var app = new Vue({
         all_selected: true,
         front_selected: false,
         back_selected: false,
+
+        unoHover: false,
+        wildflowerHover: false,
+        dashboardHover: false,
+        countHover: false,
+
+        detailedUno: false,
+        detailedWildflower: false,
+        detailedDashboard: false,
+        detailedCount: false,
     },
     methods: {
         selectHome: function(){
