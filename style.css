@@ -11,6 +11,51 @@
 }
 html, body{
     margin: 0;
+    height:100%;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+.background {
+    stroke-width: 9;
+    fill: none;
+}
+.overlayLine {
+    fill: none;
+    stroke-width: 9;
+    animation: dash 5s linear forwards;
+}
+
+.svgGridContainer, .svgGridContainer2{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    justify-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.svgGridContainer2{
+    grid-template-columns: auto auto auto auto;
+}
+.svgWrap{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 150px;
+}
+.rightJustified{
+    margin-right: -19vw;
+}
+.leftJustified{
+    margin-left: -20vw;
+}
+.svg{
+    width: 150px;
+    height: 150px;
 }
 #homeContainer{
     text-align: center;
@@ -93,11 +138,151 @@ html, body{
       transform: translateX(0px) scale(1);
     }
 }
+.testimonialWrapper{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    float: none;
+}
+.testimonialTitle{
+    font-size: 34px;
+    font-family: "boldy";
+    color: black;
+    text-align: center;
+}
+.testimonialSubTitle{
+    font-size: 18px;
+    color: rgb(116, 116, 116);
+    margin-top: -20px;
+    text-align: center;
+}
+.testimonialText{
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+}
+.testimonialPic{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-bottom: 20px;
+}
+.testimonialName{
+    font-size: 22px;
+    font-family: "boldy";
+    color: black;
+}
+.testimonialJob{
+    font-size: 18px;
+    margin-top: -15px;
+}
+@keyframes ani2 {
+    0% {
+      left: 0;
+    }
+    50% {
+      left: 40px;
+    }
+    100% {
+      left: 0;
+    }
+}
+@keyframes ani {
+    0% {
+      right: 0;
+    }
+    50% {
+      right: 40px;
+    }
+    100% {
+      right: 0;
+    }
+}
+.nextArrow, .nextArrow2{
+    height: 55px;
+    width: 55px;
+    vertical-align: middle;
+    margin-left: 10px;
+    filter: invert(100%);
+    float: right;
+    animation: ani 3s infinite;
+    animation-direction: linear;
+    position: relative;
+    cursor: pointer;
+    margin-top: 60px;
+}
+.nextArrow{
+    transform: rotate(180deg);
+    float: left;
+    animation: ani2 3s infinite;
+    animation-direction: linear;
+}
+.arrowContainer{
+    height: 100%;
+    float: left;
+}
+.arrowContainer2{
+    height: 100%;
+    float: right;
+}
+.testimonialWrapper{
+    display: none;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dots{
+    text-align: center;
+    margin-top: 5px;
+    display: block;
+    margin-bottom: 10px;
+} 
+.active, .dot:hover {
+    background-color: #717171;
+}
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2.5s;
+    animation-name: fade;
+    animation-duration: 2.5s;
+}  
+@-webkit-keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
+}
+.footerMix{
+    background-color: rgb(36,84,101);
+}
+.whiteStrip{
+    width: 100%;
+    clear: both;
+    background-color: white;
+    margin-top: 20px;
+    padding-top: 20px;
+}
 
 /* myWork page */
 .darkBack{
     background-image: linear-gradient(to top, rgb(49,49,51), rgb(22,22,24));
-    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 100%;
+    margin-bottom: 90px;
 }
 #header{
     background-color: transparent;
@@ -188,10 +373,8 @@ li:hover{
             transform: rotate(360deg);
 }
 .langTitle{
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-items: center;
     text-align: center;
+    margin: 95px 0px 0px 0px;
 }
 h1{
     margin-bottom: -10px !important;
@@ -208,11 +391,12 @@ h2{
 }
 footer{
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 15vh;
     height: 100px;
     width: 100%;
-    background-color: rgba(21, 117, 146, 0.5);
-    padding-bottom: 16px;
+    background-color: rgb(36,84,101);    
+    position: fixed;
+    bottom: 0px;
 }
 footer p{
     color: white;
@@ -222,11 +406,26 @@ footer p{
 .grayFooter{
     background-color: rgb(69,71,74); 
 }
+.spacer{
+    height: 160px;
+    clear: both;
+}
+.spacerDark{
+    height: 100px;
+    clear: both;
+    background-color: rgb(49,49,51);
+}
 
 /* My Work CSS */
 .lightBack{
-    height: 100%;
     background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    min-height: 100%;
+    margin-bottom: 90px;
 }
 .bHeader{
     background-color: rgba(20, 20, 20, 0.637);position: relative;
@@ -267,7 +466,7 @@ footer p{
 .workWrapper{
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-row-gap: 20px;
+    grid-row-gap: 60px;
     grid-column-gap: 10px;
     justify-items: center;
     text-align: center;
@@ -277,6 +476,7 @@ footer p{
 @media only screen and (max-width: 945px) {
     .workWrapper{
         grid-template-columns: auto auto;
+        grid-row-gap: 40px;
     }
     .workNav{
         width: auto;
@@ -317,7 +517,7 @@ footer p{
     text-align: center;
     background-color: rgba(59, 69, 73, 0.8);
     position: relative;
-    top: -50px;
+    top: -48px;
     width: 300px;
     height: 45px;
     line-height: 45px;
@@ -334,14 +534,22 @@ footer p{
     height: auto;
     display: block;
     margin: auto;
+    margin-top: 90px;
+}
+.detailedVideoMobile{
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: auto;
     margin-top: 35px;
+    border-radius: 28px;
 }
 .detailedHeader{
     font-size: 24px;
     color: rgb(49,49,51);
     text-align: center;
     font-weight: bolder;
-    margin-top: 35px;
+    margin-top: -20px;
 }
 .detailedSubHeader{
     font-size: 18px;
@@ -375,4 +583,41 @@ footer p{
     background-repeat: no-repeat;
     height: 300px;
     width: 600px;
+}
+.detailedGridWrapMobile{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.detailedPicWrapperMobile{
+    width: 250px;
+    height: 500px;
+}
+.detailedGridImgMobile{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 250px;
+    border-radius: 28px;
+}
+.detailedPicWrapper2{
+    width: 300px;
+    height: 200px;
+}
+.detailedGridImg2{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 200px;
+    width: 300px;
+}
+
+.backArrow{
+    width: 35px;
+    height: auto;
+    margin: 35px;
 }

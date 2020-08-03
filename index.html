@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta content="utf-8" http-equiv="encoding">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
     </head>
     <body>
         <div id="app">
@@ -44,7 +43,7 @@
                                     <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
                                     <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
                                     <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
-                                    <li>Contact</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                                 </ul>
                             </nav>
                         </div>
@@ -81,21 +80,131 @@
                                 </div>
                             </div>
                         </div>
-                        
+                
                         <div class="langTitle">
-                            <h2>Front-End Languages & Frameworks</h2>
-                            <h2>Back-End Languages & Frameworks</h2>
+                            <h2>Language & Framework Proficiency (Front & Back End)</h2>
                         </div>
-                        <div class="chartWrapper">
-                            <div class="chartContainer" style="position: relative; height:40vh; width:40vw">
-                                <canvas class="chart" id="frontEndChart"></canvas>
+
+                        <div class="svgGridContainer">
+                            <div class="svgWrap rightJustified">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="61" y="61" width="78" height="78" href="images/js.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="jsLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
                             </div>
-                            <div class="chartContainer" style="position: relative; height:40vh; width:40vw">
-                                <canvas class="chart" id="backEndChart"></canvas>
+                            <div class="svgWrap">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="57.5" y="57.5" width="85" height="85" href="images/html.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="htmlLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                            <div class="svgWrap leftJustified">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="57.5" y="57.5" width="85" height="85" href="images/css.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="cssLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
                             </div>
                         </div>
-                        
-                        <footer>
+
+                        <div class="svgGridContainer2">
+                            <div class="svgWrap">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/python.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="pythonLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                            <div class="svgWrap">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/c.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="cLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                            <div class="svgWrap">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/go.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="goLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                            <div class="svgWrap">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/nodejs.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="nodejsLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="svgGridContainer">
+                            <div class="svgWrap rightJustified">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/react.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="reactLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                            <div class="svgWrap">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/vue.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="vueLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                            <div class="svgWrap leftJustified">
+                                <svg class="svg" viewBox="45 43 110 110">
+                                    <image x="62" y="62" width="76" height="76" href="images/express.png"></image>
+                                    <circle class="background" cx="100" cy="100" r="47" stroke="#707070" />
+                                    <circle id="expressLine" class="overlayLine" cx="100" cy="100" r="47" stroke="#2bbeeb" stroke-dasharray="0, 3000" stroke-dashoffset="251" transform="rotate(-90,100,100)" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="whiteStrip">
+                            <h2 class="testimonialTitle">Testimonials</h2>
+                            <h3 class="testimonialSubTitle">Employers who have said some nice things</h3>
+                            <div class="arrowContainer">
+                               <img class="nextArrow" src="images/arrow.png" @click="nextSlide">
+                            </div>
+                            <div class="arrowContainer2">
+                               <img class="nextArrow2" src="images/arrow.png" @click="prevSlide">
+                            </div>
+                            <div class="testimonialWrapper fade">
+                                <img class="testimonialPic" src="images/johnBowler.jpg">
+                                <p class="testimonialText">
+                                “Cade is an outstanding asset to our team. He has been
+                                invaluable in marketing and providing a platform to promote alumni events and
+                                traditions through his management of our Traditions App…Our number of users and the
+                                frequency of use has increased over 100%…Cade is a tremendous asset to our Student
+                                Alumni Association and will be a fantastic employee for you.”
+                                </p>
+                                <h2 class="testimonialName">John Bowler</h2>
+                                <h3 class="testimonialJob">SAA Advisor / Alumni Director</h3>
+                            </div>
+                            <div class="testimonialWrapper fade">
+                                <img class="testimonialPic" src="images/ira.png">
+                                <p class="testimonialText">
+                                “Cade is dependable, hardworking and easy to get along with. I have a great
+                                love for Cade and admire the way he conducts himself. He works very hard to
+                                accomplish his daily tasks and shows great leadership skills when working with
+                                others… As Cade’s employer, I am able to watch him in many different ways. If Cade 
+                                doesn’t understand how to accomplish something, he will seek clarification and 
+                                then get the job done.”
+                                </p>
+                                <h2 class="testimonialName">Ira McArthur</h2>
+                                <h3 class="testimonialJob">Temple View RV</h3>
+							</div>
+                            <div class="dots" >
+                                <span class="dot" @click="currentSlide(1)"></span>
+                                <span class="dot" @click="currentSlide(2)"></span>
+                            </div>
+                        </div>
+                        <div class="spacerDark"></div>
+                        <footer class="footerMix">
                             <div class="socialWrapper">
                                 <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
                                 <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
@@ -106,6 +215,7 @@
                         </footer>
                     </div>
 
+                    <!-- MY WORK CONTENT-->
                     <div class="lightBack" v-if="page == 'myWork'">
                         <div class="bHeader">
                             <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
@@ -114,7 +224,7 @@
                                     <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
                                     <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
                                     <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
-                                    <li>Contact</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                                 </ul>
                             </nav>
                         </div>
@@ -127,21 +237,29 @@
                             <button class="workBtn" :class="{workFocus: back_selected}" @click="workSelection='backEnd'; selectBack()">BACK END</button>
                         </div>
                         <div class="workWrapper">
-                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'backEnd'" @mouseover="unoHover=true" @mouseout="unoHover=false" @click="page='detailedUno'">
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'backEnd'" @mouseover="unoHover=true" @mouseout="unoHover=false" @click="page='detailedUno'; unoHover=false">
                                 <img class="workImg" src="images/Uno/uno.png">
                                 <div class="text" v-if="unoHover">UNO - Websockets</div>
                             </div>
-                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="wildflowerHover=true" @mouseout="wildflowerHover=false">
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="wildflowerHover=true" @mouseout="wildflowerHover=false" @click="page='detailedWildflower'; wildflowerHover=false">
                                 <img class="workImg" src="images/Wildflower/main.png">
                                 <div class="text" v-if="wildflowerHover">Zion Wildflower - Mobile PWA</div>
                             </div>
-                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="dashboardHover=true" @mouseout="dashboardHover=false">
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="dashboardHover=true" @mouseout="dashboardHover=false" @click="page='detailedDashboard'; dashboardHover=false">
                                 <img class="workImg" src="images/Dashboard/main.png">
                                 <div class="text" v-if="dashboardHover">Zion Dashboard - Desktop</div>
                             </div>
-                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="countHover=true" @mouseout="countHover=false">
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'frontEnd'" @mouseover="countHover=true" @mouseout="countHover=false" @click="page='detailedCount'; countHover=false">
                                 <img class="workImg" src="images/Count/main.png">
                                 <div class="text" v-if="countHover">Zion VEM - Mobile PWA</div>
+                            </div>
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'backEnd'" @mouseover="mudHover=true" @mouseout="mudHover=false" @click="page='detailedMud'; mudHover=false">
+                                <img class="workImg" src="images/Mud/1.png">
+                                <div class="text" v-if="mudHover">MUD - Distributed Systems</div>
+                            </div>
+                            <div class="workPicWrapper" v-if="workSelection == 'all' || workSelection == 'backEnd'" @mouseover="terainHover=true" @mouseout="terainHover=false" @click="page='detailedTerain'; terainHover=false">
+                                <img class="workImg" src="images/Terain/1.png">
+                                <div class="text" v-if="terainHover">Terain - Graphics</div>
                             </div>
                         </div>
                         <footer class="grayFooter">
@@ -155,7 +273,8 @@
                         </footer>
                     </div>
 
-                     <div class="lightBack" v-if="page == 'detailedUno'">
+                    <!-- MY WORK DETAILED CONTENT-->
+                    <div class="lightBack" v-if="page == 'detailedUno'">
                         <div class="bHeader">
                             <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                             <nav>
@@ -163,11 +282,12 @@
                                     <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
                                     <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
                                     <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
-                                    <li>Contact</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                                 </ul>
                             </nav>
                         </div>
                         <div class="centerWrapper">
+                            <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
                             <h1 class="detailedHeader">Uno</h1>
                             <h2 class="detailedSubHeader">A Websockets Project</h2>
                             <video autoplay muted loop class="detailedVideo">
@@ -175,9 +295,9 @@
                             </video>
                         </div>
                         <p class="detailedText">
-                        Uno, was a fun class project during my Junior year. The game was my own idea to build, with the requirement to make a websocket application.
-                        The focus wasn't as much on the UI, but the constant use of websockets. Wether a player was to send a message to an opponent, draw a card, or play a card,
-                        websockets would process the action and display it to the other user in a variety of ways. 
+                            Uno, was a fun class project during my Junior year. The game was my own idea to build, with the requirement to make a websocket application.
+                            The focus wasn't as much on the UI, but the constant use of websockets. Wether a player was to send a message to an opponent, draw a card, or play a card,
+                            websockets would process the action and display it to the other user in a variety of ways. 
                         </p>
                         <div class="detailedGridWrap">
                             <div class="detailedPicWrapper">
@@ -187,7 +307,275 @@
                                 <img class="detailedGridImg" src="images/Uno/2.png">
                             </div>
                         </div>
+                        <div class="spacer"></div>
                         <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <div class="lightBack" v-if="page == 'detailedWildflower'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="centerWrapper">
+                            <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
+                            <h1 class="detailedHeader">Zion Wildflower App</h1>
+                            <h2 class="detailedSubHeader">Progressive Web Application</h2>
+                            <video autoplay muted loop class="detailedVideoMobile">
+                                <source src="images/Wildflower/recording.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="detailedText">
+                            Zion Wildflower is an app that is being produced to the public. It is projected to be used by thousands of people visiting Zion National Park.
+                            The goal was to make a PWA instead of the native app that was already produced because it was only being used once per client, then deleted.
+                            We redesigned the entire app for a better user experience as a whole. It could now be used as a web app or even installed like a native web app, but using
+                            PWA capabilities (including the important need for use offline).
+                        </p>
+                        <div class="detailedGridWrapMobile">
+                            <div class="detailedPicWrapperMobile">
+                                <img class="detailedGridImgMobile" src="images/Wildflower/1.png">
+                            </div>
+                            <div class="detailedPicWrapperMobile">
+                                <img class="detailedGridImgMobile" src="images/Wildflower/2.png">
+                            </div>
+                            <div class="detailedPicWrapperMobile">
+                                <img class="detailedGridImgMobile" src="images/Wildflower/3.png">
+                            </div>
+                        </div>
+                        <div class="spacer"></div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <div class="lightBack" v-if="page == 'detailedDashboard'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="centerWrapper">
+                            <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
+                            <h1 class="detailedHeader">Zion Dashboard</h1>
+                            <h2 class="detailedSubHeader">Stat Based App for Zion National Park</h2>
+                            <video autoplay muted loop class="detailedVideo">
+                                <source src="images/Dashboard/recording.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="detailedText">
+                            Zions Park Data Dashboard is a project that has been replicated for multiple National Parks in the United States. Each of these parks
+                            were keeping track of these stats manually with paper and pencil. They now have machine learning cameras and radars that help them keep
+                            track of visitor stats. I developed the web app to display the API data in multiple formats for the National Parks employees to use.
+                        </p>
+                        <div class="detailedGridWrap">
+                            <div class="detailedPicWrapper">
+                                <img class="detailedGridImg" src="images/Dashboard/1.png">
+                            </div>
+                            <div class="detailedPicWrapper">
+                                <img class="detailedGridImg" src="images/Dashboard/2.png">
+                            </div>
+                        </div>
+                        <div class="spacer"></div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <div class="lightBack" v-if="page == 'detailedCount'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="centerWrapper">
+                            <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
+                            <h1 class="detailedHeader">Zion VEM PWA</h1>
+                            <h2 class="detailedSubHeader">Counting App for National Parks</h2>
+                            <video autoplay muted loop class="detailedVideoMobile">
+                                <source src="images/Count/recording.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="detailedText">
+                            Zion VEM is an extremely important app for the National Parks. They hire multiple interns to use clickers, pencils, and paper to 
+                            keep track of visitor counts and current conditions of each trail in the park. This app was created for these interns to use their mobile phones
+                            for a much more accurate and efficient way of tracking these stats. Because of the need to use the app on trails without an internet connection,
+                            we made the app progressive for efficient offline use.
+                        </p>
+                        <div class="detailedGridWrapMobile">
+                            <div class="detailedPicWrapperMobile">
+                                <img class="detailedGridImgMobile" src="images/Count/1.png">
+                            </div>
+                            <div class="detailedPicWrapperMobile">
+                                <img class="detailedGridImgMobile" src="images/Count/2.png">
+                            </div>
+                            <div class="detailedPicWrapperMobile">
+                                <img class="detailedGridImgMobile" src="images/Count/3.png">
+                            </div>
+                        </div>
+                        <div class="spacer"></div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <div class="lightBack" v-if="page == 'detailedMud'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="centerWrapper">
+                            <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
+                            <h1 class="detailedHeader">MUD</h1>
+                            <h2 class="detailedSubHeader">Distributed Systems - Multi User Dungeon Game</h2>
+                            <video autoplay muted loop class="detailedVideo">
+                                <source src="images/Mud/recording.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="detailedText">
+                            This was by far the most challenging project I have ever accomplished. I was given 3 weeks to complete a MUD using distributed system methodologies.
+                            By the end of the project the game was able to register new users and login users from there last location. It also was able to share information live 
+                            through listeners in golang. 
+                        </p>
+                        <div class="detailedGridWrapMobile">
+                            <div class="detailedPicWrapper2">
+                                <img class="detailedGridImg2" src="images/Mud/1.png">
+                            </div>
+                            <div class="detailedPicWrapper2">
+                                <img class="detailedGridImg2" src="images/Mud/2.png">
+                            </div>
+                            <div class="detailedPicWrapper2">
+                                <img class="detailedGridImg2" src="images/Mud/3.png">
+                            </div>
+                        </div>
+                        <div class="spacer"></div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <div class="lightBack" v-if="page == 'detailedTerain'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="centerWrapper">
+                            <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
+                            <h1 class="detailedHeader">Terain</h1>
+                            <h2 class="detailedSubHeader">Graphics Class Project - Graphical display using C++, OpenGL, and GLUT</h2>
+                            <video autoplay muted loop class="detailedVideo">
+                                <source src="images/Terain/recording.mov" type="video/mp4">
+                            </video>
+                        </div>
+                        <p class="detailedText">
+                            This was a fun project using C++ and some extra libraries to figure out how to create a moving object on a textured landscape.
+                            The main purpose of the assignment was to use math to figure out how to create the hills, valleys, and bodies of water. 
+                        </p>
+                        <div class="detailedGridWrap">
+                            <div class="detailedPicWrapper">
+                                <img class="detailedGridImg" src="images/Terain/1.png">
+                            </div>
+                            <div class="detailedPicWrapper">
+                                <img class="detailedGridImg" src="images/Terain/2.png">
+                            </div>
+                        </div>
+                        <div class="spacer"></div>
+                        <footer class="grayFooter">
+                            <div class="socialWrapper">
+                                <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
+                                <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
+                                <a href="https://github.com/ckgardner"><img class="socialIcon" src="images/github.png"></a>
+                                <a href="https://www.linkedin.com/in/cade-gardner-33a92a152/"><img class="socialIcon" src="images/linkedin.png"></a>
+                            </div>
+                            <p>Cade Gardner <span class="blueText">&copy;2020</span></p>
+                        </footer>
+                    </div>
+
+                    <!-- CONTACT CONTENT-->
+                    <div class="darkBack" v-if="page=='contact'">
+                        <div class="bHeader">
+                            <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                            <nav>
+                                <ul>
+                                    <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                                    <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                                    <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                                    <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div id="aboutTitle">
+                            <h1>CONTACT ME</h1>
+                        </div>
+
+                        <div class="contactContainer">
+                        </div>
+
+                        <footer>
                             <div class="socialWrapper">
                                 <a href="https://www.instagram.com/cadorian27/"><img class="socialIcon" src="images/instagram.png"></a>
                                 <a href="https://www.facebook.com/cade.gardner.58"><img class="socialIcon" src="images/facebook.png"></a>
@@ -201,7 +589,6 @@
                 </v-content>
             </v-app>
         </div>
-        <script src="charts.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="app.js"></script>
     </body>
