@@ -21,6 +21,24 @@ var app = new Vue({
         countHover: false,
         mudHover: false,
         terainHover: false,
+
+        fName: "",
+        lName: "",
+        message: "",
+        fNameError: false,
+        lNameError: false,
+        messageError: false,
+
+        jsHover: false,
+        htmlHover: false,
+        cssHover: false,
+        pythonHover: false,
+        cHover: false,
+        goHover: false,
+        nodeHover: false,
+        vueHover: false,
+        reactHover: false,
+        expressHover: false,
     },
     created: function (){
         this.loadSvgs();
@@ -119,6 +137,84 @@ var app = new Vue({
             this.setStop("reactLine", 47, .3);
             this.setStop("vueLine", 47, .9);
             this.setStop("expressLine", 47, .5);     
+        },
+        sendClicked: function(){
+            if (this.fName != "" && this.lName != "" && this.message != "") {
+                window.location.href="mailto:" + "?subject=Hello there!" + "&body=" + 
+                    "Hi Cade, my name is " + this.fName + " " + this.lName + "%0D%0A" + "%0D%0A" + this.message;
+                ;
+            }else {
+                if (this.fName == "") {
+                    this.fNameError = true;
+                }
+                if (this.lName == "") {
+                    this.lNameError = true;
+                }
+                if (this.message == ""){
+                    this.messageError = true;
+                }
+            }
+        },
+        resetJs: function(){
+            document.getElementById("jsLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("jsLine").style.animation = "";
+            },.2);
+        },
+        resetHtml: function(){
+            document.getElementById("htmlLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("htmlLine").style.animation = "";
+            },.2);
+        },
+        resetCss: function(){
+            document.getElementById("cssLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("cssLine").style.animation = "";
+            },.2);
+        },
+        resetPython: function(){
+            document.getElementById("pythonLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("pythonLine").style.animation = "";
+            },.2);
+        },
+        resetC: function(){
+            document.getElementById("cLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("cLine").style.animation = "";
+            },.2);
+        },
+        resetGo: function(){
+            document.getElementById("goLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("goLine").style.animation = "";
+            },.2);
+        },
+        resetNode: function(){
+            document.getElementById("nodeLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("nodeLine").style.animation = "";
+            },.2);
+        },
+
+        resetReact: function(){
+            document.getElementById("reactLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("reactLine").style.animation = "";
+            },.2);
+        },
+        resetVue: function(){
+            document.getElementById("vueLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("vueLine").style.animation = "";
+            },.2);
+        },
+        resetExpress: function(){
+            document.getElementById("expressLine").style.animation = "null";
+            setTimeout(function(){
+                document.getElementById("expressLine").style.animation = "";
+            },.2);
         },
     },
 });
