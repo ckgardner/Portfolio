@@ -192,9 +192,9 @@ var app = new Vue({
             },.2);
         },
         resetNode: function(){
-            document.getElementById("nodeLine").style.animation = "null";
+            document.getElementById("nodejsLine").style.animation = "null";
             setTimeout(function(){
-                document.getElementById("nodeLine").style.animation = "";
+                document.getElementById("nodejsLine").style.animation = "";
             },.2);
         },
 
