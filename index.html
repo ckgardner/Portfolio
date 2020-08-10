@@ -45,7 +45,7 @@
             <!-- ABOUT ME CONTENT -->
             <transition name="slide-fade">
             <div class="darkBack" v-if="page == 'aboutMe'">
-                <div id="header">
+                <div class="header mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -55,6 +55,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="header mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div id="aboutTitle">
                     <h1>ABOUT ME</h1>
@@ -228,7 +240,7 @@
             <!-- MY WORK CONTENT-->
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'myWork'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -238,6 +250,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div id="workTitle">
                     <h1>MY WORK</h1>
@@ -289,7 +313,7 @@
             <!-- MY WORK DETAILED CONTENT-->
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'detailedUno'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -299,6 +323,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div class="centerWrapper">
                     <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
@@ -336,7 +372,7 @@
 
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'detailedWildflower'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -346,6 +382,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div class="centerWrapper">
                     <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
@@ -387,7 +435,7 @@
 
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'detailedDashboard'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -397,6 +445,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div class="centerWrapper">
                     <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
@@ -434,7 +494,7 @@
 
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'detailedCount'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -444,6 +504,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div class="centerWrapper">
                     <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
@@ -485,7 +557,7 @@
 
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'detailedMud'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -495,6 +567,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div class="centerWrapper">
                     <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
@@ -535,7 +619,7 @@
 
             <transition name="slide-fade">
             <div class="lightBack" v-if="page == 'detailedTerain'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -545,6 +629,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected" class="darkOptions">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
                 <div class="centerWrapper">
                     <img src="images/backArrow.png" class="backArrow" @click="page = 'myWork'">
@@ -582,7 +678,7 @@
             <!-- CONTACT CONTENT-->
             <transition name="slide-fade">
             <div class="darkBack smaller" v-if="page=='contact'">
-                <div class="bHeader">
+                <div class="bHeader mobileHide">
                     <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
                     <nav>
                         <ul>
@@ -592,6 +688,18 @@
                             <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
                         </ul>
                     </nav>
+                </div>
+                <div class="bHeader mobileHeader">
+                    <img id="profilePic" src="images/me.png" @click="page='aboutMe'">
+                    <img class="hamburger" src="images/hamburgerWhite.png" @click="hamburgerClicked()">
+                </div>
+                <div v-if="hamburger_selected">
+                    <ul>
+                        <li @click="page='home'; selectHome()" :class="{focus: home_selected}">Home</li>
+                        <li @click="page='aboutMe'; selectMe()" :class="{focus: aboutMe_selected}">About Me</li>
+                        <li @click="page='myWork'; selectWork()" :class="{focus: myWork_selected}">My Work</li>
+                        <li @click="page='contact'; selectContact()" :class="{focus: contact_selected}">Contact</li>
+                    </ul>
                 </div>
 
                 <div id="aboutTitle">

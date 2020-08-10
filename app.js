@@ -20,6 +20,7 @@ var app = new Vue({
         all_selected: true,
         front_selected: false,
         back_selected: false,
+        hamburger_selected: false,
 
         unoHover: false,
         wildflowerHover: false,
@@ -89,24 +90,28 @@ var app = new Vue({
             this.aboutMe_selected = false;
             this.myWork_selected = false;
             this.contact_selected = false;
+            this.hamburger_selected = false;
         },
         selectMe: function(){
             this.home_selected = false;
             this.aboutMe_selected = true;
             this.myWork_selected = false;
             this.contact_selected = false;
+            this.hamburger_selected = false;
         },
         selectWork: function(){
             this.home_selected = false;
             this.aboutMe_selected = false;
             this.myWork_selected = true;
             this.contact_selected = false;
+            this.hamburger_selected = false;
         },
         selectContact: function(){
             this.home_selected = false;
             this.aboutMe_selected = false;
             this.myWork_selected = false;
             this.contact_selected = true;
+            this.hamburger_selected = false;
         },
         selectAll: function(){
             this.all_selected = true;
@@ -222,5 +227,12 @@ var app = new Vue({
                 document.getElementById("expressLine").style.animation = "";
             },.2);
         },
+        hamburgerClicked: function(){
+            if (this.hamburger_selected == false){
+                this.hamburger_selected = true;
+            }else{
+                this.hamburger_selected = false;
+            }
+        }
     },
 });

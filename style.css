@@ -85,7 +85,6 @@ html, body{
     position: absolute;
     bottom: 30%;
     width: 100%;
-    padding: 20px;
 }
 #homehero{
     position: absolute;
@@ -310,7 +309,7 @@ html, body{
 .smaller{
     height: 90%;
 }
-#header{
+.header{
     background-color: transparent;
     position: relative;
     width: 100%;
@@ -614,14 +613,14 @@ footer p a{
     margin-top: 50px;
 }
 .detailedPicWrapper{
-    width: 600px;
-    height: 300px;
+    width: 90%;
+    height: auto;
 }
 .detailedGridImg{
     background-size: contain;
     background-repeat: no-repeat;
-    height: 300px;
-    width: 600px;
+    height: auto;
+    width: 100%;
 }
 .detailedGridWrapMobile{
     display: grid;
@@ -702,4 +701,112 @@ footer p a{
 }
 .formError{
     border: 2px solid rgb(192, 39, 39);
+}
+.mobileHide{
+    display: inline-block;
+}
+.mobileHeader{
+    display: none;
+}
+.darkOptions ul li{
+    background-color: rgb(116, 116, 116);
+}
+@media only screen and (max-width: 990px) {
+    .detailedGridWrapMobile{
+        grid-template-columns: auto;
+    }
+}
+@media only screen and (max-width: 890px) {
+    .myWrapper{
+        grid-template-columns: auto auto;
+    }
+    .darkBack{
+        height: 1400px;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .svgGridContainer, .svgGridContainer2, .langTitle{
+        display: none;
+    }
+}
+@media only screen and (max-width: 530px) {
+    .contactContainer{
+        width: 90%;
+    }
+    .detailedVideoMobile{
+        border-radius: 10px;
+    }
+    .detailedGridWrap{
+        grid-template-columns: auto;
+    }
+    .detailedPicWrapper, .detailedGridImg{
+        width: 90%;
+        height: auto;
+    }
+    #homeContainer{
+        bottom: 0;
+        top: 5%;
+    }
+    #aboutContainer{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .socialIcon{
+        margin: 5px;
+    }
+    .mobileHide{
+        display: none;
+    }
+    .mobileHeader{
+        display: inline-block;
+    }
+    .hamburger{
+        height: 20px;
+        width: 25px;
+        float: right;
+        margin: 16px;
+        margin-top: 26px;
+    }
+    nav{
+        display: none;
+    }
+    ul{
+        width: 100%;
+        list-style-type: none;
+        display: block;
+        background-color: transparent;
+        text-align: center;
+        margin-top: -10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.293);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.293);
+        margin-bottom: 10px;
+    }
+    li {
+        text-align: center;
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        color: white;
+        display: block;
+        padding: 2px;
+        cursor: pointer;
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        margin: 0;
+        border-bottom: .2px solid rgba(0, 0, 0, 0.293);
+    }
+    li:visited{
+        color: white;
+    }
+    li:hover{
+        color: rgb(43, 190, 235);
+        background-color: rgba(128, 128, 128, 0.349); 
+    }
+    .focus{
+        color: rgb(43, 190, 235);
+    }
+    .myWrapper{
+        grid-template-columns: auto;
+    }
 }
