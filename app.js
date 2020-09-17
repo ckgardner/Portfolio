@@ -138,16 +138,16 @@ var app = new Vue({
             c.className = "overlayLine";
         },
         loadSvgs: function (){
-            this.setStop("htmlLine", 47, .8);
-            this.setStop("jsLine", 47, .9);
-            this.setStop("cssLine", 47, .75);
-            this.setStop("cLine", 47, .7);
+            this.setStop("htmlLine", 47, 1);
+            this.setStop("jsLine", 47, .95);
+            this.setStop("cssLine", 47, .90);
+            this.setStop("cLine", 47, .8);
             this.setStop("goLine", 47, .5);
             this.setStop("pythonLine", 47, .7);
-            this.setStop("nodejsLine", 47, .5);
-            this.setStop("reactLine", 47, .3);
-            this.setStop("vueLine", 47, .9);
-            this.setStop("expressLine", 47, .5);     
+            this.setStop("nodejsLine", 47, .7);
+            this.setStop("reactLine", 47, .4);
+            this.setStop("vueLine", 47, .95);
+            this.setStop("expressLine", 47, .6);     
         },
         sendClicked: function(){
             if (this.fName != "" && this.lName != "" && this.message != "") {
