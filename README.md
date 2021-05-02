@@ -1,3 +1,4 @@
+<img width="1792" alt="Screen Shot 2021-05-02 at 2 45 11 PM" src="https://user-images.githubusercontent.com/54300598/116827189-020e6600-ab55-11eb-870f-1140f01e5c5d.png">
 # My Portfolio
 
 I took this opportunity to showcase my work to the public. In this project, I show exactly where I stand with different technologies and how proficient I feel with each of them. 
