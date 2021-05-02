@@ -2,7 +2,7 @@
 
 # My Portfolio
 
-Click here to go to live site (https://ckgardner.github.io/Portfolio/)
+[Click here to go to the live site](https://ckgardner.github.io/Portfolio/)
 
 I took this opportunity to showcase my work to the public. In this project, I show exactly where I stand with different technologies and how proficient I feel with each of them. 
 
